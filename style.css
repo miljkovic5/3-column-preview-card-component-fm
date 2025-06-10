@@ -90,6 +90,25 @@ img {
     background-color: var(--color-dark-cyan);
   }
 
+  .card__button {
+    background-color: var(--color-grey-light);
+    border-radius: var(--radius-25);
+    border: none;
+    border: var(--size-2) solid transparent;
+    color: var(--color-dark-cyan);
+    font-size: var(--fs-base);
+    line-height: var(--lh-25);
+    padding-block: var(--space-11) var(--space-12);
+    padding-inline: var(--space-31-5);
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--color-paragraph);
+      color: var(--color-paragraph);
+      cursor: pointer;
+    }
+  }
+
   .card__section--first {
     background-color: var(--color-bright-orange);
     border-radius: var(--radius-8) var(--radius-8) 0 0;
@@ -138,25 +157,6 @@ img {
     color: var(--color-paragraph);
     font-size: var(--fs-base);
     line-height: var(--lh-25);
-  }
-
-  .card__button {
-    background-color: var(--color-grey-light);
-    border-radius: var(--radius-25);
-    border: none;
-    border: var(--size-2) solid transparent;
-    color: var(--color-dark-cyan);
-    font-size: var(--fs-base);
-    line-height: var(--lh-25);
-    padding-block: var(--space-11) var(--space-12);
-    padding-inline: var(--space-31-5);
-
-    &:hover {
-      background-color: transparent;
-      border-color: var(--color-paragraph);
-      color: var(--color-paragraph);
-      cursor: pointer;
-    }
   }
 }
 
