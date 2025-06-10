@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  /* Primary Colors */
+  --color-bright-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral Colors */
+  --color-paragraph: hsla(0, 0%, 100%, 0.75);
+  --color-grey-light: hsl(0, 0%, 95%);
+
+  /* Typography */
+  --ff-body: "Lexend Deca", sans-serif;
+  --ff-heading: "Big Shoulders Display", sans-serif;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  /* Font Sizes */
+  --fs-base: 0.9375rem; /* 15px */
+  --fs-40: 2.5rem; /* 40px */
+
+  --lh-25: 1.5625rem; /* 25px */
+
+  --size-1: 0.0625rem; /* 1px */
+  --size-2: 0.125rem; /* 2px */
+
+  /* Spacing */
+  --space-11: 0.6875rem; /* 11px */
+  --space-12: 0.75rem; /* 12px */
+  --space-25: 1.5625rem; /* 25px */
+  --space-31-5: 1.96875rem; /* 31.5px */
+  --space-35: 2.1875rem; /* 35px */
+  --space-48: 3rem; /* 48px */
+  --space-83: 5.1875rem; /* 83px */
+
+  /* Border Radius */
+  --radius-8: 0.5rem; /* 8px */
+  --radius-25: 1.5625rem; /* 25px */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-grey-light);
+  color: var(--color-paragraph);
+  display: grid;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-normal);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: var(--size-1);
+  height: var(--size-1);
+  padding: 0;
+  margin: calc(-1 * var(--size-1));
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  .card__section {
+    padding: var(--space-48);
+    width: 20.4375rem;
+    background-color: var(--color-dark-cyan);
+  }
+
+  .card__section--first {
+    background-color: var(--color-bright-orange);
+    border-radius: var(--radius-8) var(--radius-8) 0 0;
+
+    .card__button {
+      color: var(--color-bright-orange);
+    }
+  }
+
+  .card__section--second {
+    background-color: var(--color-dark-cyan);
+
+    .card__button {
+      color: var(--color-dark-cyan);
+    }
+  }
+
+  .card__section--third {
+    background-color: var(--color-very-dark-cyan);
+    border-radius: 0 0 var(--radius-8) var(--radius-8);
+
+    .card__button {
+      color: var(--color-very-dark-cyan);
+    }
+  }
+
+  .card__image {
+    margin-block-end: var(--space-35);
+  }
+
+  .card__title,
+  .card__text {
+    margin-block-end: var(--space-25);
+  }
+
+  .card__title {
+    color: var(--color-grey-light);
+    font-family: var(--ff-heading);
+    font-size: var(--fs-40);
+    font-weight: var(--fw-bold);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .card__text {
+    color: var(--color-paragraph);
+    font-size: var(--fs-base);
+    line-height: var(--lh-25);
+  }
+
+  .card__button {
+    background-color: var(--color-grey-light);
+    border-radius: var(--radius-25);
+    border: none;
+    border: var(--size-2) solid transparent;
+    color: var(--color-dark-cyan);
+    font-size: var(--fs-base);
+    line-height: var(--lh-25);
+    padding-block: var(--space-11) var(--space-12);
+    padding-inline: var(--space-31-5);
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--color-paragraph);
+      color: var(--color-paragraph);
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .card {
+    flex-direction: row;
+
+    .card__section {
+      width: 19.1875rem;
+    }
+
+    .card__section--first {
+      border-radius: var(--radius-8) 0 0 var(--radius-8);
+    }
+
+    .card__section--third {
+      border-radius: 0 var(--radius-8) var(--radius-8) 0;
+    }
+
+    .card__text {
+      margin-block-end: var(--space-83);
+    }
+  }
+}
