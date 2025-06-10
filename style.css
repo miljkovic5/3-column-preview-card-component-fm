@@ -115,6 +115,10 @@ img {
 
     .card__button {
       color: var(--color-bright-orange);
+
+      &:hover {
+        color: var(--color-paragraph);
+      }
     }
   }
 
@@ -123,6 +127,10 @@ img {
 
     .card__button {
       color: var(--color-dark-cyan);
+
+      &:hover {
+        color: var(--color-paragraph);
+      }
     }
   }
 
@@ -132,6 +140,10 @@ img {
 
     .card__button {
       color: var(--color-very-dark-cyan);
+
+      &:hover {
+        color: var(--color-paragraph);
+      }
     }
   }
 
